@@ -56,5 +56,30 @@ namespace TiendaRopa
         {
             OpenChildForm(new MarcaForm());
         }
+
+        private void tallesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new TalleForm());
+        }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ProductoForm());
+        }
+
+        private void categoriaProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new TipoProductoForm());
+        }
+
+        private void comprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new CompraForm());
+        }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new VentaForm());
+        }
     }
 }

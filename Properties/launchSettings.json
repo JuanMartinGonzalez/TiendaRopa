@@ -3,7 +3,7 @@
     "TiendaRopa": {
       "commandName": "Project",
       "environmentVariables": {
-        "TiendaDB": "Server=SAM\\SQLEXPRESS;Database=Tienda;TrustServerCertificate=true;Integrated Security=true;"
+        "TiendaDB": "Server=EVA;Database=Capitalismus;TrustServerCertificate=true;Integrated Security=true;"
       }
     }
   }

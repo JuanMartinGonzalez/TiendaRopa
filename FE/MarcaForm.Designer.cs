@@ -39,17 +39,18 @@
             // 
             // textBoxNombre
             // 
-            textBoxNombre.Location = new Point(151, 47);
+            textBoxNombre.Location = new Point(132, 35);
+            textBoxNombre.Margin = new Padding(3, 2, 3, 2);
             textBoxNombre.Name = "textBoxNombre";
-            textBoxNombre.Size = new Size(204, 27);
+            textBoxNombre.Size = new Size(179, 23);
             textBoxNombre.TabIndex = 29;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(41, 54);
+            label1.Location = new Point(36, 40);
             label1.Name = "label1";
-            label1.Size = new Size(64, 20);
+            label1.Size = new Size(51, 15);
             label1.TabIndex = 28;
             label1.Text = "Nombre";
             // 
@@ -57,22 +58,25 @@
             // 
             dataGridViewMarcas.AllowUserToAddRows = false;
             dataGridViewMarcas.AllowUserToDeleteRows = false;
+            dataGridViewMarcas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewMarcas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewMarcas.Location = new Point(403, 30);
+            dataGridViewMarcas.Location = new Point(353, 22);
+            dataGridViewMarcas.Margin = new Padding(3, 2, 3, 2);
             dataGridViewMarcas.MultiSelect = false;
             dataGridViewMarcas.Name = "dataGridViewMarcas";
             dataGridViewMarcas.ReadOnly = true;
             dataGridViewMarcas.RowHeadersWidth = 51;
             dataGridViewMarcas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewMarcas.Size = new Size(679, 401);
+            dataGridViewMarcas.Size = new Size(594, 301);
             dataGridViewMarcas.TabIndex = 27;
             dataGridViewMarcas.SelectionChanged += dataGridViewMarcas_SelectionChanged;
             // 
             // buttonModificar
             // 
-            buttonModificar.Location = new Point(261, 201);
+            buttonModificar.Location = new Point(228, 151);
+            buttonModificar.Margin = new Padding(3, 2, 3, 2);
             buttonModificar.Name = "buttonModificar";
-            buttonModificar.Size = new Size(94, 29);
+            buttonModificar.Size = new Size(82, 22);
             buttonModificar.TabIndex = 26;
             buttonModificar.Text = "Modificar";
             buttonModificar.UseVisualStyleBackColor = true;
@@ -80,9 +84,10 @@
             // 
             // buttonEliminar
             // 
-            buttonEliminar.Location = new Point(151, 201);
+            buttonEliminar.Location = new Point(132, 151);
+            buttonEliminar.Margin = new Padding(3, 2, 3, 2);
             buttonEliminar.Name = "buttonEliminar";
-            buttonEliminar.Size = new Size(94, 29);
+            buttonEliminar.Size = new Size(82, 22);
             buttonEliminar.TabIndex = 25;
             buttonEliminar.Text = "Eliminar";
             buttonEliminar.UseVisualStyleBackColor = true;
@@ -90,9 +95,10 @@
             // 
             // buttonAgregar
             // 
-            buttonAgregar.Location = new Point(41, 201);
+            buttonAgregar.Location = new Point(36, 151);
+            buttonAgregar.Margin = new Padding(3, 2, 3, 2);
             buttonAgregar.Name = "buttonAgregar";
-            buttonAgregar.Size = new Size(94, 29);
+            buttonAgregar.Size = new Size(82, 22);
             buttonAgregar.TabIndex = 24;
             buttonAgregar.Text = "Agregar";
             buttonAgregar.UseVisualStyleBackColor = true;
@@ -100,15 +106,16 @@
             // 
             // MarcaForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1123, 460);
+            ClientSize = new Size(983, 345);
             Controls.Add(textBoxNombre);
             Controls.Add(label1);
             Controls.Add(dataGridViewMarcas);
             Controls.Add(buttonModificar);
             Controls.Add(buttonEliminar);
             Controls.Add(buttonAgregar);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "MarcaForm";
             Text = "MarcaForm";
             Load += MarcaForm_Load;

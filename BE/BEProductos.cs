@@ -88,5 +88,65 @@ namespace TiendaRopa.BE
                 return false;
             }
         }
+        /// <summary>
+        /// Recibe la lista de renglones cargados en la grilla (ProductoEnCarga),
+        /// arma el lote de productos + talles, y delega al DAL que haga
+        /// la transacción.
+        /// </summary>
+        public bool GuardarLoteDesdeCarga(List<ProductoEnCarga> carga)
+        {
+            Error = null;
+
+            if (carga == null || carga.Count == 0)
+            {
+                Error = "No hay productos para guardar.";
+                return false;
+            }
+
+            try
+            {
+                // 1) Agrupar por producto (NombreModelo + MarcaId + TipoProductoId)
+                var grupos = carga
+                    .GroupBy(p => new
+                    {
+                        p.NombreModelo,
+                        p.MarcaId,
+                        p.TipoProductoId
+                    });
+
+                var loteDal = new List<ProductoDAL.ProductoLoteInput>();
+
+                foreach (var grupo in grupos)
+                {
+                    // Talles para este producto (si corresponde)
+                    var tallesIds = grupo
+                        .Where(x => x.PoseeTalle && x.TalleId.HasValue)
+                        .Select(x => x.TalleId.Value)
+                        .Distinct()
+                        .ToList();
+
+                    var input = new ProductoDAL.ProductoLoteInput
+                    {
+                        NombreModelo = grupo.Key.NombreModelo,
+                        MarcaId = grupo.Key.MarcaId,
+                        TipoProductoId = grupo.Key.TipoProductoId,
+                        TalleIds = tallesIds
+                    };
+
+                    loteDal.Add(input);
+                }
+
+                // 2) Llamar al DAL para que ejecute la transacción
+                var dal = new ProductoDAL();
+                bool ok = dal.InsertarLoteConTalles(loteDal);
+                if (!ok) Error = dal.Error;
+                return ok;
+            }
+            catch (Exception ex)
+            {
+                Error = ex.Message;
+                return false;
+            }
+        }
     }
 }

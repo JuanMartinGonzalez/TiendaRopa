@@ -4,10 +4,25 @@
     <Compile Update="FE\ClienteForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FE\CompraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FE\MarcaForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FE\ProductoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FE\ProveedorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FE\TalleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FE\TipoProductoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FE\VentaForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormPadre.cs">

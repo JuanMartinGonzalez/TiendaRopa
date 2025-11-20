@@ -41,33 +41,35 @@
             // 
             // textBoxCUIT
             // 
-            textBoxCUIT.Location = new Point(157, 105);
+            textBoxCUIT.Location = new Point(137, 79);
+            textBoxCUIT.Margin = new Padding(3, 2, 3, 2);
             textBoxCUIT.Name = "textBoxCUIT";
-            textBoxCUIT.Size = new Size(204, 27);
+            textBoxCUIT.Size = new Size(179, 23);
             textBoxCUIT.TabIndex = 23;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(51, 112);
+            label2.Location = new Point(45, 84);
             label2.Name = "label2";
-            label2.Size = new Size(40, 20);
+            label2.Size = new Size(33, 15);
             label2.TabIndex = 22;
             label2.Text = "CUIT";
             // 
             // textBoxNombre
             // 
-            textBoxNombre.Location = new Point(157, 44);
+            textBoxNombre.Location = new Point(137, 33);
+            textBoxNombre.Margin = new Padding(3, 2, 3, 2);
             textBoxNombre.Name = "textBoxNombre";
-            textBoxNombre.Size = new Size(204, 27);
+            textBoxNombre.Size = new Size(179, 23);
             textBoxNombre.TabIndex = 21;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(47, 51);
+            label1.Location = new Point(41, 38);
             label1.Name = "label1";
-            label1.Size = new Size(64, 20);
+            label1.Size = new Size(51, 15);
             label1.TabIndex = 20;
             label1.Text = "Nombre";
             // 
@@ -75,22 +77,25 @@
             // 
             dataGridViewProveedores.AllowUserToAddRows = false;
             dataGridViewProveedores.AllowUserToDeleteRows = false;
+            dataGridViewProveedores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewProveedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewProveedores.Location = new Point(409, 27);
+            dataGridViewProveedores.Location = new Point(358, 20);
+            dataGridViewProveedores.Margin = new Padding(3, 2, 3, 2);
             dataGridViewProveedores.MultiSelect = false;
             dataGridViewProveedores.Name = "dataGridViewProveedores";
             dataGridViewProveedores.ReadOnly = true;
             dataGridViewProveedores.RowHeadersWidth = 51;
             dataGridViewProveedores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewProveedores.Size = new Size(679, 401);
+            dataGridViewProveedores.Size = new Size(594, 301);
             dataGridViewProveedores.TabIndex = 19;
             dataGridViewProveedores.SelectionChanged += dataGridViewProveedores_SelectionChanged;
             // 
             // buttonModificar
             // 
-            buttonModificar.Location = new Point(267, 198);
+            buttonModificar.Location = new Point(234, 148);
+            buttonModificar.Margin = new Padding(3, 2, 3, 2);
             buttonModificar.Name = "buttonModificar";
-            buttonModificar.Size = new Size(94, 29);
+            buttonModificar.Size = new Size(82, 22);
             buttonModificar.TabIndex = 18;
             buttonModificar.Text = "Modificar";
             buttonModificar.UseVisualStyleBackColor = true;
@@ -98,9 +103,10 @@
             // 
             // buttonEliminar
             // 
-            buttonEliminar.Location = new Point(157, 198);
+            buttonEliminar.Location = new Point(137, 148);
+            buttonEliminar.Margin = new Padding(3, 2, 3, 2);
             buttonEliminar.Name = "buttonEliminar";
-            buttonEliminar.Size = new Size(94, 29);
+            buttonEliminar.Size = new Size(82, 22);
             buttonEliminar.TabIndex = 17;
             buttonEliminar.Text = "Eliminar";
             buttonEliminar.UseVisualStyleBackColor = true;
@@ -108,9 +114,10 @@
             // 
             // buttonAgregar
             // 
-            buttonAgregar.Location = new Point(47, 198);
+            buttonAgregar.Location = new Point(41, 148);
+            buttonAgregar.Margin = new Padding(3, 2, 3, 2);
             buttonAgregar.Name = "buttonAgregar";
-            buttonAgregar.Size = new Size(94, 29);
+            buttonAgregar.Size = new Size(82, 22);
             buttonAgregar.TabIndex = 16;
             buttonAgregar.Text = "Agregar";
             buttonAgregar.UseVisualStyleBackColor = true;
@@ -118,9 +125,9 @@
             // 
             // ProveedorForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1134, 454);
+            ClientSize = new Size(992, 340);
             Controls.Add(textBoxCUIT);
             Controls.Add(label2);
             Controls.Add(textBoxNombre);
@@ -129,6 +136,7 @@
             Controls.Add(buttonModificar);
             Controls.Add(buttonEliminar);
             Controls.Add(buttonAgregar);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "ProveedorForm";
             Text = "ProveedorForm";
             Load += ProveedorForm_Load;
