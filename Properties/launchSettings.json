@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TiendaRopa": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "TiendaDB": "Server=SAM\\SQLEXPRESS;Database=Tienda;TrustServerCertificate=true;Integrated Security=true;"
+      }
+    }
+  }
+}
